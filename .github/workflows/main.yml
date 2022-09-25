@@ -24,9 +24,7 @@ jobs:
         run: npm run build
 
       - name: Run tests
-        run: npm run       
+        run: npm run
       - name: Get test coverage
         run: npm run test:cov
-
-
-https://primefinder.azurewebsites.net/api/primefinder
+# https://primefinder.azurewebsites.net/api/primefinder
