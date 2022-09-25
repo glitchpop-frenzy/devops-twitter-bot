@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+    types: [opened]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '>=6.0.0'
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+#       # - name: Run tests
+#       #   run: npm run test
+
+#       # - name: Get test coverage
+#       #   run: npm run test:cov
+
+
+https://primefinder.azurewebsites.net/api/primefinder
